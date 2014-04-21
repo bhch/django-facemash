@@ -1,6 +1,5 @@
-## Gonna upload the code soon
+## django-facemash
 
+### A Facemash-like app as seen in the movie The Social Network.
 
-### Meanwhile check the demo **[here](http://facemash.pythonanywhere.com)**.
-
-Apologies for inconveniencies, if any, caused to you.
+#### Check the DEMO **[here](http://facemash.pythonanywhere.com)**.
