@@ -7,15 +7,18 @@ from facemash.models import FaceMash
 
 def play(request):
     """ The main-page view of facemash app. """
-
-    contestants = FaceMash.objects.all()
-    contestant_1 = random.choice(contestants)
-    contestant_2 = random.choice(contestants)
-    # A while loop to ensure that the contestants aren't same.
-    while contestant_1 == contestant_2:
+    try:
+        contestants = FaceMash.objects.all()
+        contestant_1 = random.choice(contestants)
         contestant_2 = random.choice(contestants)
-    args = {'contestant_1': contestant_1, 'contestant_2': contestant_2}
-    return render(request, 'facemash.html', args)
+        # A while loop to ensure that the contestants aren't same.
+        while contestant_1 == contestant_2:
+            contestant_2 = random.choice(contestants)
+        args = {'contestant_1': contestant_1, 'contestant_2': contestant_2}
+    except IndexError:
+        error = True
+        args = {'error': error}
+    return render(request, 'facemash.html', args) 
 
 def ratings_calculator(request, winner_id, loser_id):
     """
