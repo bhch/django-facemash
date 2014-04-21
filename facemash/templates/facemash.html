@@ -1,6 +1,10 @@
 {% extends 'facemash_base.html' %}
     {% block content %}
         <div class="container" style="padding-top: 0px;margin-bottom:30px;">
+    {% if error %}
+        <h2> You haven't added any players yet</h2>
+        <h3> Visit admin site and add at least 2 players to start facemash</h3>
+    {% else %}
         <div class="main-info">
         <h3>Were we let in for our looks? No. Will we be judged on them? Yes.</h3>
         <h2>Who's Hotter? Click to Choose.</h2>
@@ -23,6 +27,7 @@
                 <p style="text-align:center;">{{ contestant_2.name }}</p>
             </a>
         </div>
+    {% endif %}
     </div>
     {% endblock content %}
     <ul class="nav">
