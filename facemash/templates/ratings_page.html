@@ -1,0 +1,31 @@
+{% extends 'facemash_base.html' %}
+{% block title %} | Ratings{% endblock title %}
+{% block banstyle %}style="min-width:960px;"{% endblock banstyle %}
+{% block constyle %}style="width:940px;"{% endblock constyle %}
+{% block content %}
+	<div class="container" style="width: 100%;">
+	{% for face in faces %}
+		<div class="rate-pic photo-holder">
+			<img src="{{ MEDIA_URL }}{{ face.photo }}" />
+			<br /><p style="font-size:14px;">Name: {{ face.name }}<br />
+			Ratings: {{ face.ratings|floatformat:2 }}</p>
+		</div>
+	{% endfor %}
+	</div>
+
+	<div class="info">
+		<strong>How ratings are calculated</strong><br />
+		<small>Ratings are calculated using the <strong>Glicko-2 Algorithm</strong>.<br />
+		Each new player is given a base rating <em>r</em> of 1500, rating deviation, <em>RD</em> of 350 and volatility <em>&sigma;</em> of 0.06. 
+		The system constant <em>&tau;</em> is set to 0.5 and it is also made sure that the <em>RD</em> of any player would never go below
+		30.<hr />
+		See the links below to learn more about Glicko-2 rating system:<br />
+		<a href="#" target="_blank">
+			<span class="label label-info"><i class="icon-globe icon-white"></i></span> Glicko-2 website
+		</a>&nbsp;
+		<a href="#" target="_blank">
+			<span class="label label-info"><i class="icon-globe icon-white"></i></span> Glicko-2 Wikipedia
+		</a><br />
+	</div>
+{% endblock content %}
+{% block button %}<a class="cool-b" href="{% url 'play' %}">&larr; Go back and play facemash</a>{% endblock button %}

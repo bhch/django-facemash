@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+h1{
+    font-size: 50px;
+}
+h2{
+    font-size: 28px;
+}
+h3{
+    font-size: 20px;
+    padding-top: 20px;
+}
+a{
+    text-decoration: none;
+    color: #2BB4D6;
+}
+.banner{
+    min-width: 680px;
+    background-color: #6D1811;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+}
+.container{
+    width: 680px;
+    margin: auto;
+    padding: 30px 0px;
+    display: table;
+    text-align: center;
+}
+.main-info{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.arrowkey{
+    font-weight: normal;
+    text-shadow: 0 1px 0 #fff;
+    background-color: #cecece;
+    padding: 0 5px 2px 5px;
+    border: 1px solid #bbb;
+    -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+            border-radius: 4px;
+}
+.arrow-shadow{
+    background-color: #ececec;
+    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.55);
+        -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.55);
+            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.55);
+}
+.pic-size{
+    float: left;
+    width: 300px;
+}
+.rate-pic{
+    float: left;
+    width: 150px;
+    margin: 5px 5px;
+}
+.photo-holder{
+    display: block;
+    padding: 4px;
+    background-color: #fcfcfc;
+    color: #333;
+    text-shadow: 0 1px 0 #bbb;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+            border-radius: 4px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+        -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+}
+.photo-holder > img{
+    max-width: 100%;
+    border: none;
+}
+.pic-size .photo-holder > img{
+    height: 200px;
+}
+.rate-pic.photo-holder > img{
+    height: 115px;
+}
+a.photo-holder:hover{
+    border-color: #0088cc;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+        -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+            box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+        -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+        -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+            transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+.arrow-select{
+    border-color: #0088cc;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+        -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+            box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+}
+.or-holder{
+    float:left;
+    width:50px;
+    margin: 0 5px;
+}
+.nav{
+    width: 100%;
+}
+.nav li{
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px;
+    font-size: 14px;
+}
+.nav li a:hover{
+    color: #92403E;
+}
+.nav li .cool-a{
+    padding: 3px;
+    font-size: 14px;
+    color: #F9B532;
+    font-weight: normal;
+    background-color: #2479B4;
+    border: 1px solid #1271B4;
+    -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+            border-radius: 5px;
+}
+.nav li .cool-a:hover{
+    color: #F9B532;
+    background-color: #0B63A6;
+}
+.cool-b{
+    padding: 3px;
+    font-size: 14px;
+    color: #Fff;
+    font-weight: normal;
+    background-color: #0A9B55;
+    border: 1px solid #02884E;
+    -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+            border-radius: 5px;
+}
+.cool-b:hover{
+    background-color: #2E8861;
+    color: #fff !important;
+}
+.info{
+    width: 680px;
+    margin: 20px auto;
+    padding: 10px 0px 10px 15px;
+    text-align: left;
+    text-shadow: 0 1px 0 #fff;
+    background-color: #E6F1F7;
+    color: #1AB1F7;
+    border: 1px solid #CAE1EB;
+    -webkit-border-radius: 4px;
+        -moz-border-radius:4px;
+        border-radius:4px;
+}
+.info a{
+    color: #008EF2;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.info a:hover{
+    color: #0066cc;
+}
+.info2{
+    font-size: 13px;
+    width: 100%;
+}
+hr{
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #ffffff;
+    margin: 5px 0;
+}
+.footer{
+    font-size: 12px;
+    display: table;
+    padding: 10px;
+    max-width: 960px;
+    margin: auto;
+    color: #666;
+}
+.faq{
+    text-align: left;
+    line-height: 20px;
+}
+.faq > p{
+    padding: 10px 0;
+    font-size: 14px;
+}

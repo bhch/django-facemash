@@ -1,0 +1,57 @@
+{% extends 'facemash_base.html' %}
+    {% block content %}
+        <div class="container" style="padding-top: 0px;margin-bottom:30px;">
+        <div class="main-info">
+        <h3>Were we let in for our looks? No. Will we be judged on them? Yes.</h3>
+        <h2>Who's Hotter? Click to Choose.</h2>
+        <strong>Or hit <span id="LeftArrow" class="arrowkey arrow-shadow">&larr;</span> Left or Right 
+        <span id="RightArrow" class="arrowkey arrow-shadow">&rarr;</span> arrow-keys</strong>
+        </div>
+        <div class="pic-size">
+            <a id="LeftImage" href="{% url 'calculator' contestant_1.id contestant_2.id %}" class="photo-holder">
+                <img src="{{ MEDIA_URL }}{{ contestant_1.photo }}" />
+                <p style="text-align:center;">{{ contestant_1.name }}</p>
+            </a>
+        </div>
+        <div class="or-holder">
+            <br /><br /><br /><br /><br />
+            <strong>OR</strong>
+        </div>
+        <div class="pic-size">
+            <a id="RightImage" href="{% url 'calculator' contestant_2.id contestant_1.id %}" class="photo-holder">
+                <img src="{{ MEDIA_URL }}{{ contestant_2.photo }}" />
+                <p style="text-align:center;">{{ contestant_2.name }}</p>
+            </a>
+        </div>
+    </div>
+    {% endblock content %}
+    <ul class="nav">
+        {% block button %}<li><a class="cool-a" href="{% url 'ratings' %}">View ratings</a></li>{% endblock button %}
+    </ul>
+    </div>
+    <hr />
+    <div class="footer">
+        &copy; Copyright <em>year</em>
+    </div>
+
+<!-- Include jQuery and following script for arrow-keys functionality -->
+{% block js %}
+
+    <script src="{{ STATIC_URL }}js/jquery.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $(document).keydown(function(event) {
+            if (event.keyCode == 37) {
+                document.location = $("#LeftImage").attr('href');
+                $('#LeftArrow').removeClass('arrow-shadow');
+                $('#LeftImage').addClass('arrow-select');
+            } else if (event.keyCode == 39) {
+                document.location = $("#RightImage").attr('href');
+                $('#RightArrow').removeClass('arrow-shadow');
+                 $('#RightImage').addClass('arrow-select');
+            }
+        });
+    });
+    </script>
+
+{% endblock js %}

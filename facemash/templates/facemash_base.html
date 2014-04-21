@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/mashstyle.css" />
+    <link rel="shortcut icon" href="{{ STATIC_URL }}favicon/favicon.png" />
+    <title>Facemash{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <div class="banner" {% block banstyle %}{% endblock banstyle %}>
+        <h1><a href="{% url 'play' %}" style="color:#fff;">FACEMASH</a></h1>
+    </div>
+    <div class="container" {% block constyle %}{% endblock constyle %}>
+    {% block content %}
+        
+    {% endblock content %}
+    <ul class="nav">
+        {% block button %}<li><a class="cool-a" href="{% url 'ratings' %}">View ratings</a></li>{% endblock button %}
+    </ul>
+    </div>
+    <hr />
+    <div class="footer">
+        &copy; Copyright <em>year</em>
+    </div>
+
+{% block js %}
+{% endblock js %}
+</body>
+</html>
