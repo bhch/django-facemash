@@ -23,7 +23,7 @@ Install it like any other Django app.
 4. In your project's `urls.py` file, add `url(r'^facemash/', include('facemash.urls')),`.
 5. Visit `127.0.0.1:8000/facemash/` and see it in action.
 6. Next, visit admin site and add at least 2 players to start playing facemash.
-7. DO NOT add one 1 player. This will lead to an endless `while` loop which checks that a player can't be shown twice in a single page.
+7. DO NOT add only 1 player. This will lead to an endless `while` loop which checks that a player should never be shown twice in a single page.
 
 ## Tested with
 
