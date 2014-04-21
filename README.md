@@ -6,6 +6,13 @@
 
 **Please note that this doesn't include `tests`.**
 
+## Description
+
+1. **Programming language -** Python
+2. **Web framework -** Django
+3. **Algorithm -** Glicko-2
+4. **Learn more -** [Glicko-2 website](http://glicko.net/glicko.html) | [Glico-2 Wikipedia](http://en.wikipedia.org/wiki/Glicko_rating_system)
+
 ## How to install
 
 Install it like any other Django app.
