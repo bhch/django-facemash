@@ -1,3 +1,5 @@
+**Be warned!** The code in this repo sucks. I mean I've written the whole algorithm in the views.py file. It would have been better to separate the code in another file so that anyone could use any algorithm they want. Also, there are no tests! When I made this repo, I was new to programming and didn't know better.
+
 ## django-facemash
 
 ### A Facemash-like app as seen in the movie The Social Network.
